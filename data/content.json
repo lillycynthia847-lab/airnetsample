@@ -1,0 +1,102 @@
+{
+  "company": {
+    "name": "Airnet Broadband",
+    "tagline": "Fast. Reliable. Affordable Internet",
+    "about": "AirNet Broadband Limited is a privately owned Kenyan Internet Service Provider (ISP) offering Fiber and wireless internet services in Kenya.",
+    "vision": "To provide fast, reliable, and affordable internet services to all parts of Kenya and the region.",
+    "mission": "By putting our clients at the centre of everything we do, our goal is to continually improve services to help you the client gain a competitive technological edge."
+  },
+  "contact": {
+    "phone": "0721515583",
+    "whatsapp": "254721515583",
+    "supportEmail": "info@airnet.co.ke",
+    "salesEmail": "sales@airnet.co.ke",
+    "location": "Gathii Hse Ground Floor, Suite 3, Kanisa ST, Nyeri, Kenya",
+    "socialMedia": {
+      "facebook": "https://facebook.com/airnetke",
+      "instagram": "",
+      "tiktok": ""
+    }
+  },
+  "homeFibre": [
+    {
+      "name": "Light Pro",
+      "speed": "15",
+      "price": "2,000",
+      "features": ["Light Web Browsing", "Email & Basic Attachments", "Moderate Streaming", "Free Installation"],
+      "highlighted": false
+    },
+    {
+      "name": "Premium Pro",
+      "speed": "20",
+      "price": "2,500",
+      "features": ["Large File Sharing", "HD Streaming", "Fast Web Browsing", "Free Installation"],
+      "highlighted": true
+    },
+    {
+      "name": "Premium Plus Pro",
+      "speed": "30",
+      "price": "3,000",
+      "features": ["HD/Live Streaming", "Multiple Device Streaming", "Superfast Video Downloads", "Free Installation"],
+      "highlighted": false
+    },
+    {
+      "name": "Ultimate",
+      "speed": "40",
+      "price": "4,000",
+      "features": ["4K Live Streaming", "Multiple Device Streaming", "Superfast Video Downloads", "Free Installation"],
+      "highlighted": false
+    }
+  ],
+  "businessFibre": [
+    {
+      "name": "Business 15",
+      "speed": "15",
+      "price": "2,500",
+      "features": ["Unlimited Traffic", "Free Installation", "Light Web Browsing", "Email & Basic Attachments", "Moderate Streaming"],
+      "highlighted": false
+    },
+    {
+      "name": "Business 20",
+      "speed": "20",
+      "price": "5,000",
+      "features": ["Unlimited Traffic", "Free Installation", "Large File Sharing", "HD Streaming", "Fast Web Browsing"],
+      "highlighted": true
+    },
+    {
+      "name": "Business 30",
+      "speed": "30",
+      "price": "7,500",
+      "features": ["Unlimited Traffic", "Free Installation", "HD/Live Streaming", "Voice over IP (IP Phones)", "Remote CCTV Connection"],
+      "highlighted": false
+    },
+    {
+      "name": "Business 40",
+      "speed": "40",
+      "price": "10,000",
+      "features": ["Unlimited Traffic", "Free Installation", "HD/Live Streaming", "Voice over IP (IP Phones)", "Remote CCTV Connection"],
+      "highlighted": false
+    }
+  ],
+  "coverage": [
+    {
+      "region": "Nyeri",
+      "areas": ["Nyeri Town", "King'ong'o", "Transformer", "Mathari Hospital Area", "Pembe Tatu", "Kamakwa", "Ring Road", "Mumbi", "Asian Quarters", "Classic", "Ciaraini", "Skuta", "Gatitu", "Mesha", "Ruring'u"]
+    },
+    {
+      "region": "Kutus",
+      "areas": ["Kutus Town", "Mjini", "Gakuu", "Rukenya", "Spenza Area", "Kimica"]
+    },
+    {
+      "region": "Mwea",
+      "areas": ["Mwea Town", "Wang'uru", "Thiba", "Gathigiriri", "Murubara", "Red Soil", "Karira", "Kimbimbi"]
+    },
+    {
+      "region": "Kagio",
+      "areas": ["Kagio Town", "Wisdom Petrol Station Area", "Silver Slopes Area", "Abai Area", "Baricho Road Thumaita", "Kandongu", "Gigi Lounge Area", "Kiamachiri Police Area"]
+    }
+  ],
+  "admin": {
+    "password": "airnet2024"
+  }
+}

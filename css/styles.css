@@ -509,6 +509,7 @@ h4 { font-size: 1.25rem; }
   align-items: center;
   position: relative;
   overflow: hidden;
+  padding: calc(var(--space-3xl) + 2rem) 0;
 }
 
 .hero::before {

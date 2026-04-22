@@ -527,6 +527,33 @@ h4 { font-size: 1.25rem; }
 .preloader-content img {
   height: 60px;
   animation: pulseLogo 2s infinite ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.logo-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 8px; /* To contain the shimmer nicely */
+}
+
+.logo-shimmer {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.6), transparent);
+  transform: skewX(-20deg);
+  animation: sweepLight 2.5s infinite;
+  z-index: 2;
+}
+
+@keyframes sweepLight {
+  0% { left: -100%; }
+  50% { left: 200%; }
+  100% { left: 200%; }
 }
 
 .loader-spinner {

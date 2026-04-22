@@ -19,40 +19,14 @@ async function loadAdminContent() {
   }
 }
 
-// ---- Login ----
-function handleLogin() {
-  const passwordInput = document.getElementById('admin-password');
-  const errorEl = document.getElementById('login-error');
-  const password = passwordInput.value;
-
-  if (password === adminContent.admin.password) {
-    document.getElementById('admin-login').style.display = 'none';
-    document.getElementById('admin-dashboard').style.display = 'block';
-    populateDashboard();
-  } else {
-    errorEl.style.display = 'block';
-    passwordInput.value = '';
-    passwordInput.focus();
-  }
-}
-
-function handleLogout() {
-  if (unsavedChanges) {
-    if (!confirm('You have unsaved changes. Are you sure you want to logout?')) return;
-  }
-  document.getElementById('admin-login').style.display = 'flex';
-  document.getElementById('admin-dashboard').style.display = 'none';
-  document.getElementById('admin-password').value = '';
-  document.getElementById('login-error').style.display = 'none';
-}
-
-// Enter key login
+// Initialization
 document.addEventListener('DOMContentLoaded', async () => {
-  await loadAdminContent();
-
-  document.getElementById('admin-password').addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') handleLogin();
-  });
+  // Only load if dashboard is visible (user is logged in)
+  const dashboard = document.getElementById('admin-dashboard');
+  if (dashboard && dashboard.style.display !== 'none') {
+    await loadAdminContent();
+    populateDashboard();
+  }
 
   // Warn before leaving with unsaved changes
   window.addEventListener('beforeunload', (e) => {
@@ -316,26 +290,16 @@ async function saveContent() {
       updateSaveButton();
       showToast('Changes saved successfully!', 'success');
     } else {
-      throw new Error('Server error');
+      if (response.status === 401) {
+        showToast('Session expired. Please reload and login again.', 'error');
+      } else {
+        throw new Error('Server error');
+      }
     }
   } catch (error) {
     console.error('Save failed:', error);
-    showToast('Server save failed. Use "Download JSON" to save manually.', 'error');
+    showToast('Failed to save to server. Check your cPanel file permissions.', 'error');
   }
-}
-
-function downloadContent() {
-  gatherContactInfo();
-  gatherCompanyInfo();
-
-  const blob = new Blob([JSON.stringify(adminContent, null, 2)], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'content.json';
-  a.click();
-  URL.revokeObjectURL(url);
-  showToast('JSON file downloaded. Upload it to data/content.json on your server.', 'success');
 }
 
 // ---- Unsaved Changes Tracking ----

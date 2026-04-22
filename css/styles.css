@@ -501,9 +501,59 @@ h4 { font-size: 1.25rem; }
   z-index: 1;
 }
 
+/* ---------- Preloader ---------- */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.preloader-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.preloader-content img {
+  height: 60px;
+  animation: pulseLogo 2s infinite ease-in-out;
+}
+
+.loader-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.preloader-content p {
+  color: var(--gray-300);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@keyframes spin { 100% { transform: rotate(360deg); } }
+@keyframes pulseLogo {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+}
+
 /* ---------- Hero Section ---------- */
 .hero {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, #3D2A6B 100%);
+  background: linear-gradient(rgba(10, 15, 44, 0.8), rgba(26, 31, 78, 0.7)), url('../assets/hero-bg.png') center/cover no-repeat;
   min-height: 60vh;
   display: flex;
   align-items: center;

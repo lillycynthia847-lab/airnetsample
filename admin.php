@@ -1,3 +1,39 @@
+<?php
+session_start();
+
+// Read current content to get password
+$contentPath = __DIR__ . '/data/content.json';
+$content = ['admin' => ['password' => 'airnet2024']]; // Fallback
+if (file_exists($contentPath)) {
+    $contentStr = file_get_contents($contentPath);
+    if ($contentStr) {
+        $decoded = json_decode($contentStr, true);
+        if ($decoded) $content = $decoded;
+    }
+}
+$correctPassword = $content['admin']['password'];
+
+// Handle Logout
+if (isset($_GET['action']) && $_GET['action'] === 'logout') {
+    session_destroy();
+    header('Location: admin.php');
+    exit;
+}
+
+// Handle Login
+$loginError = '';
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['password'])) {
+    if ($_POST['password'] === $correctPassword) {
+        $_SESSION['admin_logged_in'] = true;
+        header('Location: admin.php');
+        exit;
+    } else {
+        $loginError = 'Incorrect password. Please try again.';
+    }
+}
+
+$isLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,23 +46,31 @@
 </head>
 <body>
 
+  <?php if (!$isLoggedIn): ?>
   <!-- Login Screen -->
   <div class="admin-login" id="admin-login">
     <div class="admin-login-card">
       <img src="assets/logo.png" alt="Airnet Broadband" onerror="this.style.display='none'">
       <h2>Admin Panel</h2>
       <p class="subtitle">Enter your password to continue</p>
-      <div class="admin-login-error" id="login-error">Incorrect password. Please try again.</div>
-      <div class="admin-input-group">
-        <label for="admin-password">Password</label>
-        <input type="password" id="admin-password" placeholder="Enter admin password" autocomplete="current-password">
-      </div>
-      <button class="btn btn-primary" id="login-btn" onclick="handleLogin()">Log In</button>
+      
+      <?php if ($loginError): ?>
+      <div class="admin-login-error" style="display:block;"><?php echo htmlspecialchars($loginError); ?></div>
+      <?php endif; ?>
+      
+      <form method="POST" action="admin.php">
+        <div class="admin-input-group">
+          <label for="admin-password">Password</label>
+          <input type="password" id="admin-password" name="password" placeholder="Enter admin password" autocomplete="current-password" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Log In</button>
+      </form>
     </div>
   </div>
+  <?php else: ?>
 
   <!-- Dashboard -->
-  <div class="admin-dashboard" id="admin-dashboard">
+  <div class="admin-dashboard" id="admin-dashboard" style="display:block;">
 
     <!-- Header -->
     <div class="admin-header">
@@ -38,12 +82,9 @@
         <button class="btn btn-primary" id="save-btn" onclick="saveContent()" style="padding: 10px 24px; font-size: 0.9rem;">
           💾 Save Changes
         </button>
-        <button class="btn btn-outline" id="download-btn" onclick="downloadContent()" style="padding: 10px 24px; font-size: 0.9rem;">
-          ⬇ Download JSON
-        </button>
-        <button class="btn" onclick="handleLogout()" style="color: var(--gray-500); font-size: 0.9rem;">
+        <a href="admin.php?action=logout" class="btn" style="color: var(--gray-500); font-size: 0.9rem; text-decoration: none;">
           Logout
-        </button>
+        </a>
       </div>
     </div>
 
@@ -178,5 +219,6 @@
   <div class="admin-toast" id="admin-toast"></div>
 
   <script src="js/admin.js"></script>
+  <?php endif; ?>
 </body>
 </html>

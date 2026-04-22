@@ -295,6 +295,18 @@ function initScrollAnimations() {
 
 // ---- Initialize ----
 document.addEventListener('DOMContentLoaded', async () => {
+  // Preloader Logic
+  const preloader = document.getElementById('preloader');
+  if (preloader) {
+    // Lock screen for exactly 3 seconds, then fade out
+    setTimeout(() => {
+      preloader.style.opacity = '0';
+      preloader.style.visibility = 'hidden';
+      // Remove from DOM after the CSS transition finishes
+      setTimeout(() => preloader.remove(), 800);
+    }, 3000);
+  }
+
   await loadContent();
   if (!siteContent) return;
 

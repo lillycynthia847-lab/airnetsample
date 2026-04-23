@@ -292,22 +292,42 @@ function initContact() {
 
 // ---- Scroll Animations ----
 function initScrollAnimations() {
-  const observer = new IntersectionObserver((entries) => {
+  // Handle legacy .fade-in elements
+  const fadeObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        
-        // Trigger word reveal if it's the about text wrapper
         if (entry.target.id === 'about-text') {
           entry.target.querySelectorAll('.reveal-word').forEach(word => {
             word.classList.add('revealed');
           });
         }
+        fadeObserver.unobserve(entry.target);
       }
     });
   }, { threshold: 0.1 });
-  document.querySelectorAll('.fade-in, #about-text').forEach(el => observer.observe(el));
+
+  // Handle new .reveal, .reveal-left, .reveal-right elements
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Small delay so animation feels intentional
+        const delay = entry.target.classList.contains('reveal-delay-1') ? 100 :
+                      entry.target.classList.contains('reveal-delay-2') ? 200 :
+                      entry.target.classList.contains('reveal-delay-3') ? 300 :
+                      entry.target.classList.contains('reveal-delay-4') ? 400 : 0;
+        setTimeout(() => {
+          entry.target.classList.add('revealed');
+        }, delay);
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-in, #about-text').forEach(el => fadeObserver.observe(el));
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => revealObserver.observe(el));
 }
+
 
 // ---- Initialize ----
 document.addEventListener('DOMContentLoaded', async () => {

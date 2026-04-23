@@ -211,7 +211,14 @@ function initAbout() {
   const a = document.getElementById('about-text');
   const v = document.getElementById('vision-text');
   const m = document.getElementById('mission-text');
-  if (a) a.textContent = siteContent.company.about;
+  
+  if (a) {
+    const words = siteContent.company.about.split(' ');
+    a.innerHTML = words.map((word, i) => 
+      `<span class="reveal-word" style="transition-delay: ${i * 0.04}s">${word}</span>`
+    ).join(' ');
+  }
+  
   if (v) v.textContent = siteContent.company.vision;
   if (m) m.textContent = siteContent.company.mission;
 }
@@ -287,10 +294,19 @@ function initContact() {
 function initScrollAnimations() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('visible');
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        
+        // Trigger word reveal if it's the about text wrapper
+        if (entry.target.id === 'about-text') {
+          entry.target.querySelectorAll('.reveal-word').forEach(word => {
+            word.classList.add('revealed');
+          });
+        }
+      }
     });
   }, { threshold: 0.1 });
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  document.querySelectorAll('.fade-in, #about-text').forEach(el => observer.observe(el));
 }
 
 // ---- Initialize ----

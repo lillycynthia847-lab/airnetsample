@@ -113,30 +113,58 @@
           <div class="about-text-wrapper" id="about-text">
             <!-- Text will be populated by main.js with word-reveal animation -->
           </div>
-          
-          <div class="about-cards">
-            <div class="about-card fade-in" style="transition-delay: 0.2s;">
-              <div class="about-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-              </div>
-              <div class="about-card-text">
-                <h4>Our Vision</h4>
-                <div id="vision-text"></div>
-              </div>
-            </div>
-            <div class="about-card fade-in" style="transition-delay: 0.4s;">
-              <div class="about-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-              </div>
-              <div class="about-card-text">
-                <h4>Our Mission</h4>
-                <div id="mission-text"></div>
-              </div>
-            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VISION & MISSION SECTION ===== -->
+  <section class="vm-section">
+
+    <!-- VISION PANEL -->
+    <div class="vm-panel reveal-left">
+      <div class="vm-image-side">
+        <img src="assets/about-1.png" alt="Our Vision">
+        <div class="vm-image-overlay">
+          <span class="vm-overlay-label">01</span>
+        </div>
+      </div>
+      <div class="vm-text-side vm-text-dark">
+        <div class="vm-text-inner">
+          <span class="vm-tag" style="color: var(--sky-blue);">Our Vision</span>
+          <h2 class="vm-heading">Where we're<br><em>going.</em></h2>
+          <div class="vm-accent-line" style="background: var(--sky-blue);"></div>
+          <p class="vm-body" id="vision-text">To provide fast, reliable, and affordable internet services to all parts of Kenya and the region.</p>
+          <div class="vm-icon-row">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--sky-blue)" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span>A connected Kenya</span>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- MISSION PANEL -->
+    <div class="vm-panel vm-panel-reverse reveal-right">
+      <div class="vm-text-side vm-text-light">
+        <div class="vm-text-inner">
+          <span class="vm-tag" style="color: var(--accent);">Our Mission</span>
+          <h2 class="vm-heading">How we get<br><em>there.</em></h2>
+          <div class="vm-accent-line" style="background: var(--accent);"></div>
+          <p class="vm-body" id="mission-text">By putting our clients at the centre of everything we do, our goal is to continually improve services to help you gain a competitive technological edge.</p>
+          <div class="vm-icon-row">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            <span>Client-first, always</span>
+          </div>
+        </div>
+      </div>
+      <div class="vm-image-side">
+        <img src="assets/about-2.png" alt="Our Mission">
+        <div class="vm-image-overlay">
+          <span class="vm-overlay-label">02</span>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <!-- ===== STATS SECTION ===== -->

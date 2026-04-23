@@ -1964,3 +1964,200 @@ h4 { font-size: 1.25rem; }
   .admin-tabs { padding: var(--space-sm) var(--space-md); }
   .admin-content { padding: var(--space-md); }
 }
+
+/* ============================================
+   VISION & MISSION SPLIT PANELS
+   ============================================ */
+
+.vm-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Each panel is a 50/50 full-width row */
+.vm-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 520px;
+}
+
+.vm-panel-reverse {
+  /* Keeps DOM order logical but visually reverses */
+}
+
+/* --- Image Side --- */
+.vm-image-side {
+  position: relative;
+  overflow: hidden;
+}
+
+.vm-image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s ease;
+}
+
+.vm-panel:hover .vm-image-side img {
+  transform: scale(1.04);
+}
+
+.vm-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(14,17,48,0.65) 0%, rgba(0,174,239,0.25) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 32px;
+}
+
+.vm-overlay-label {
+  font-size: 7rem;
+  font-weight: 900;
+  color: rgba(255,255,255,0.12);
+  line-height: 1;
+  font-style: italic;
+  letter-spacing: -4px;
+  user-select: none;
+}
+
+/* --- Text Side --- */
+.vm-text-side {
+  display: flex;
+  align-items: center;
+  padding: 64px 56px;
+}
+
+.vm-text-dark {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.vm-text-light {
+  background: var(--gray-50);
+  color: var(--primary);
+}
+
+.vm-text-inner {
+  max-width: 480px;
+}
+
+.vm-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.vm-heading {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.vm-text-dark .vm-heading {
+  color: var(--white);
+}
+
+.vm-text-light .vm-heading {
+  color: var(--primary);
+}
+
+.vm-heading em {
+  font-style: italic;
+  color: var(--sky-blue);
+}
+
+.vm-text-light .vm-heading em {
+  color: var(--accent);
+}
+
+.vm-accent-line {
+  width: 60px;
+  height: 4px;
+  border-radius: 99px;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.vm-accent-line::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.4);
+  transform: translateX(-100%);
+  animation: shimmerLine 2.5s infinite 1s;
+}
+
+@keyframes shimmerLine {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+.vm-body {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.vm-text-dark .vm-body {
+  color: rgba(255,255,255,0.8);
+}
+
+.vm-text-light .vm-body {
+  color: var(--gray-600);
+}
+
+.vm-icon-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.vm-text-dark .vm-icon-row {
+  color: rgba(255,255,255,0.7);
+}
+
+.vm-text-light .vm-icon-row {
+  color: var(--gray-600);
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .vm-panel {
+    grid-template-columns: 1fr;
+    min-height: unset;
+  }
+
+  .vm-panel-reverse .vm-text-side {
+    order: 1;
+  }
+
+  .vm-panel-reverse .vm-image-side {
+    order: 2;
+  }
+
+  .vm-image-side {
+    min-height: 280px;
+  }
+
+  .vm-text-side {
+    padding: 48px 28px;
+  }
+
+  .vm-heading {
+    font-size: 2rem;
+  }
+
+  .vm-overlay-label {
+    font-size: 5rem;
+  }
+}
+

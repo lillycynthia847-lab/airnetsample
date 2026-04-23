@@ -334,4 +334,44 @@ document.addEventListener('DOMContentLoaded', async () => {
   initCoverage();
   initContact();
   initScrollAnimations();
+  initCounters();
 });
+
+// ---- Counter Animation ----
+function initCounters() {
+  const counters = document.querySelectorAll('.counter');
+  const speed = 100; // Lower is faster
+
+  const animateCounter = (counter) => {
+    const target = +counter.getAttribute('data-target');
+    let count = 0;
+    const increment = target / speed;
+
+    const updateCount = () => {
+      count += increment;
+      if (count < target) {
+        counter.innerText = Math.ceil(count);
+        setTimeout(updateCount, 15);
+      } else {
+        counter.innerText = target + '+';
+      }
+    };
+    updateCount();
+  };
+
+  const observerOptions = {
+    threshold: 0.5
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  counters.forEach(counter => observer.observe(counter));
+}
+

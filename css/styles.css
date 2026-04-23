@@ -15,6 +15,8 @@
   --accent-light: #E06B9A;
   --accent-dark: #A03560;
   --purple: #7B3FA0;
+  --sky-blue: #00AEEF;
+  --sky-blue-light: #E0F7FF;
 
   /* Neutrals */
   --white: #FFFFFF;
@@ -1202,12 +1204,110 @@ h4 { font-size: 1.25rem; }
   box-shadow: var(--shadow-lg);
 }
 
+.about-teaser-text .about-subtitle {
+  color: var(--sky-blue);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-teaser-text .about-title {
+  color: var(--primary);
+}
+
 .about-teaser-text p {
   color: var(--gray-600);
   line-height: 1.8;
   margin-bottom: var(--space-xl);
   font-size: 1.1rem;
 }
+
+/* --- Stats Section --- */
+.stats-section {
+  padding: 80px 0;
+  background: var(--primary-dark);
+  color: var(--white);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-2xl);
+}
+
+.stat-item {
+  padding: var(--space-lg);
+}
+
+.stat-item h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: var(--space-xs);
+  color: var(--sky-blue);
+}
+
+.stat-item p {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.8;
+  font-weight: 600;
+}
+
+/* --- Values Section --- */
+.values-section {
+  padding: 100px 0;
+  background-color: var(--white);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-xl);
+  margin-top: var(--space-3xl);
+}
+
+.value-card {
+  padding: var(--space-xl);
+  background: var(--gray-50);
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  border: 1px solid var(--gray-200);
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--sky-blue);
+}
+
+.value-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--sky-blue-light);
+  color: var(--sky-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-lg);
+}
+
+.value-card h4 {
+  font-size: 1.25rem;
+  color: var(--primary);
+  margin-bottom: var(--space-md);
+}
+
+.value-card p {
+  color: var(--gray-600);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
 
 
 /* ---------- Contact Page ---------- */

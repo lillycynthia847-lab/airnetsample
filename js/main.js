@@ -228,21 +228,16 @@ function initCoverage() {
   const container = document.getElementById('coverage-grid');
   if (!container || !siteContent) return;
 
-  container.innerHTML = siteContent.coverage.map(region => `
-    <div class="coverage-card fade-in">
+  container.innerHTML = siteContent.coverage.map((region, i) => `
+    <div class="coverage-card reveal reveal-delay-${(i % 4) + 1}">
       <h3>${ICONS.mapPin} ${region.region}</h3>
       <div class="coverage-areas">
         ${region.areas.map(a => `<span class="coverage-area-tag">${a}</span>`).join('')}
       </div>
     </div>
   `).join('');
-
-  requestAnimationFrame(() => {
-    container.querySelectorAll('.fade-in').forEach((el, i) => {
-      setTimeout(() => el.classList.add('visible'), i * 100);
-    });
-  });
 }
+
 
 // ---- Contact ----
 function initContact() {

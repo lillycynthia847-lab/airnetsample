@@ -1393,6 +1393,70 @@ h4 { font-size: 1.25rem; }
 }
 
 
+/* ---------- Coverage Section ---------- */
+.coverage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-xl);
+  margin-top: var(--space-2xl);
+}
+
+.coverage-card {
+  background: var(--sky-blue-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  border: 1px solid rgba(0, 174, 239, 0.15);
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.coverage-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--sky-blue);
+}
+
+.coverage-card h3 {
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin-bottom: var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.coverage-card h3 svg {
+  width: 24px;
+  height: 24px;
+  color: var(--sky-blue);
+  flex-shrink: 0;
+}
+
+.coverage-areas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.coverage-area-tag {
+  background: var(--white);
+  color: var(--sky-blue);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.coverage-area-tag:hover {
+  background: var(--sky-blue);
+  color: var(--white);
+  transform: scale(1.05);
+}
 
 /* ---------- Contact Page ---------- */
 .contact-grid {

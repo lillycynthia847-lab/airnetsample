@@ -1394,13 +1394,14 @@ h4 { font-size: 1.25rem; }
 
 /* ---------- Coverage Section ---------- */
 .coverage-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-xl);
+  columns: 3 300px;
+  column-gap: var(--space-xl);
   margin-top: var(--space-2xl);
 }
 
 .coverage-card {
+  break-inside: avoid;
+  margin-bottom: var(--space-xl);
   background: linear-gradient(var(--white), var(--white)) padding-box,
               linear-gradient(135deg, var(--accent), var(--purple)) border-box;
   border: 2px solid transparent;
@@ -1408,8 +1409,9 @@ h4 { font-size: 1.25rem; }
   padding: var(--space-2xl);
   transition: all var(--transition-base);
   box-shadow: none;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .coverage-card:hover {

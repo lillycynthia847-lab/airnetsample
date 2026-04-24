@@ -228,12 +228,12 @@ function initCoverage() {
   const container = document.getElementById('coverage-grid');
   if (!container || !siteContent) return;
 
-  // Grid placement: Nyeri=col1 full height, Kutus=col2 top, Kagio=col2 bottom, Mwea=col3
+  // Grid placement: Nyeri=col1 full height, Kutus=col2 top, Mwea=col2 bottom, Kagio=col3
   const gridStyles = [
     'grid-column: 1; grid-row: 1 / 3;',  // Nyeri - tall left column
     'grid-column: 2; grid-row: 1;',       // Kutus - top middle
-    'grid-column: 3; grid-row: 1 / 3;',  // Mwea - tall right column
-    'grid-column: 2; grid-row: 2;',       // Kagio - bottom middle, stacked under Kutus
+    'grid-column: 2; grid-row: 2;',       // Mwea - stacked below Kutus
+    'grid-column: 3; grid-row: 1 / 3;',  // Kagio - right column
   ];
 
   container.innerHTML = siteContent.coverage.map((region, i) => `

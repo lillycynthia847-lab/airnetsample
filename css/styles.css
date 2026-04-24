@@ -68,7 +68,6 @@
   --accent-dark: #A03560;
   --purple: #7B3FA0;
   --sky-blue: #00AEEF;
-  --sky-blue-light: #E0F7FF;
 
   /* Neutrals */
   --white: #FFFFFF;
@@ -1402,10 +1401,10 @@ h4 { font-size: 1.25rem; }
 }
 
 .coverage-card {
-  background: var(--sky-blue-light);
+  background: var(--primary-light);
   border-radius: var(--radius-lg);
   padding: var(--space-2xl);
-  border: 1px solid rgba(0, 174, 239, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all var(--transition-base);
   box-shadow: var(--shadow-sm);
   display: flex;
@@ -1414,12 +1413,12 @@ h4 { font-size: 1.25rem; }
 
 .coverage-card:hover {
   transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 15px 30px rgba(0, 174, 239, 0.2);
   border-color: var(--sky-blue);
 }
 
 .coverage-card h3 {
-  color: var(--primary);
+  color: var(--white);
   font-size: 1.5rem;
   margin-bottom: var(--space-lg);
   display: flex;

@@ -1471,33 +1471,35 @@ h4 { font-size: 1.25rem; }
 }
 
 .contact-card {
-  background: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
   border-radius: var(--radius-lg);
   padding: var(--space-2xl);
   box-shadow: var(--shadow-md);
   text-align: center;
   transition: all var(--transition-base);
+  color: var(--white);
 }
 .contact-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 10px 30px rgba(27, 31, 75, 0.2);
 }
 
 .contact-card .icon-circle {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  background: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto var(--space-lg);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .contact-card .icon-circle svg {
   width: 28px;
   height: 28px;
-  color: var(--white);
+  color: var(--primary);
   fill: none;
   stroke: currentColor;
   stroke-width: 2;
@@ -1506,15 +1508,19 @@ h4 { font-size: 1.25rem; }
 .contact-card .icon-circle.wa-green {
   background: linear-gradient(135deg, var(--whatsapp), var(--whatsapp-dark));
 }
+.contact-card .icon-circle.wa-green svg {
+  color: var(--white);
+}
 
 .contact-card h3 {
   font-size: 1.1rem;
   margin-bottom: var(--space-sm);
+  color: var(--white);
 }
 
 .contact-card a,
 .contact-card p {
-  color: var(--gray-600);
+  color: var(--gray-300);
   font-size: 1rem;
 }
 .contact-card a:hover { color: var(--accent); }

@@ -228,22 +228,51 @@ function initCoverage() {
   const container = document.getElementById('coverage-grid');
   if (!container || !siteContent) return;
 
-  // Grid placement: Nyeri=col1 full height, Kutus=col2 top, Mwea=col2 bottom, Kagio=col3
-  const gridStyles = [
-    'grid-column: 1; grid-row: 1 / 3;',  // Nyeri - tall left column
-    'grid-column: 2; grid-row: 1;',       // Kutus - top middle
-    'grid-column: 2; grid-row: 2;',       // Mwea - stacked below Kutus
-    'grid-column: 3; grid-row: 1 / 3;',  // Kagio - right column
-  ];
+  // Change container class to wrapper for tabs
+  container.className = 'coverage-tabs-wrapper reveal';
 
-  container.innerHTML = siteContent.coverage.map((region, i) => `
-    <div class="coverage-card reveal reveal-delay-${(i % 4) + 1}" style="${gridStyles[i] || ''}">
-      <h3>${ICONS.mapPin} ${region.region}</h3>
-      <div class="coverage-areas">
-        ${region.areas.map(a => `<span class="coverage-area-tag">${a}</span>`).join('')}
-      </div>
+  // Build Tabs
+  const tabsHTML = `
+    <div class="coverage-tabs">
+      ${siteContent.coverage.map((region, i) => `
+        <button class="coverage-tab ${i === 0 ? 'active' : ''}" data-index="${i}">
+          ${ICONS.mapPin} ${region.region}
+        </button>
+      `).join('')}
     </div>
-  `).join('');
+  `;
+
+  // Build Content Area (Pills)
+  const contentHTML = `
+    <div class="coverage-content-area">
+      ${siteContent.coverage.map((region, i) => `
+        <div class="coverage-panel ${i === 0 ? 'active' : ''}" id="coverage-panel-${i}">
+          <div class="coverage-areas">
+            ${region.areas.map(a => `<span class="coverage-area-tag">${a}</span>`).join('')}
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+
+  container.innerHTML = tabsHTML + contentHTML;
+
+  // Add event listeners
+  const tabs = container.querySelectorAll('.coverage-tab');
+  const panels = container.querySelectorAll('.coverage-panel');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Remove active from all
+      tabs.forEach(t => t.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+
+      // Add active to clicked
+      tab.classList.add('active');
+      const idx = tab.getAttribute('data-index');
+      document.getElementById(`coverage-panel-${idx}`).classList.add('active');
+    });
+  });
 }
 
 

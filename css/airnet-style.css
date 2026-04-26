@@ -1015,60 +1015,7 @@ h4 { font-size: 1.25rem; }
   font-size: 1rem;
 }
 
-/* ---------- Coverage ---------- */
-.coverage-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-xl);
-}
 
-.coverage-card {
-  background: var(--white);
-  border-radius: var(--radius-lg);
-  padding: var(--space-2xl);
-  box-shadow: var(--shadow-md);
-  transition: all var(--transition-base);
-}
-.coverage-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-}
-
-.coverage-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: var(--space-lg);
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-}
-.coverage-card h3 svg {
-  color: var(--accent);
-  width: 24px;
-  height: 24px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2;
-}
-
-.coverage-areas {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-sm);
-}
-
-.coverage-area-tag {
-  background: var(--gray-100);
-  color: var(--gray-700);
-  padding: 6px 14px;
-  border-radius: var(--radius-full);
-  font-size: 0.85rem;
-  font-weight: 500;
-  transition: all var(--transition-fast);
-}
-.coverage-area-tag:hover {
-  background: var(--primary);
-  color: var(--white);
-}
 
 /* ---------- About ---------- */
 .about-grid {
@@ -1392,73 +1339,112 @@ h4 { font-size: 1.25rem; }
 }
 
 
-/* ---------- Coverage Section ---------- */
-.coverage-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
-  gap: var(--space-xl);
-  margin-top: var(--space-2xl);
-  align-items: start;
+/* ---------- Coverage Section (Tabs) ---------- */
+.coverage-tabs-wrapper {
+  max-width: 800px;
+  margin: var(--space-2xl) auto 0;
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  border: 1px solid var(--gray-200);
 }
 
-.coverage-card {
-  background: linear-gradient(var(--white), var(--white)) padding-box,
-              linear-gradient(135deg, var(--accent), var(--purple)) border-box;
-  border: 2px solid transparent;
-  border-radius: var(--radius-lg);
-  padding: var(--space-2xl);
-  transition: all var(--transition-base);
-  box-shadow: none;
+.coverage-tabs {
   display: flex;
-  flex-direction: column;
+  background: var(--gray-50);
+  border-bottom: 1px solid var(--gray-200);
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
 }
 
-.coverage-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 30px rgba(201, 75, 124, 0.15);
-  background: linear-gradient(var(--gray-50), var(--gray-50)) padding-box,
-              linear-gradient(135deg, var(--accent), var(--purple)) border-box;
+.coverage-tabs::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
 }
 
-.coverage-card h3 {
-  color: var(--primary);
-  font-size: 1.5rem;
-  margin-bottom: var(--space-lg);
+.coverage-tab {
+  flex: 1;
+  min-width: 140px;
+  background: transparent;
+  border: none;
+  padding: 20px 16px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gray-500);
+  cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  gap: 8px;
+  transition: all var(--transition-base);
+  border-bottom: 3px solid transparent;
 }
 
-.coverage-card h3 svg {
-  width: 24px;
-  height: 24px;
-  color: var(--sky-blue);
-  flex-shrink: 0;
+.coverage-tab svg {
+  width: 18px;
+  height: 18px;
+  color: var(--gray-400);
+  transition: color var(--transition-base);
+}
+
+.coverage-tab:hover {
+  color: var(--primary);
+  background: rgba(0,0,0,0.02);
+}
+
+.coverage-tab.active {
+  color: var(--primary);
+  border-bottom-color: var(--accent);
+  background: var(--white);
+}
+
+.coverage-tab.active svg {
+  color: var(--accent);
+}
+
+.coverage-content-area {
+  padding: var(--space-2xl);
+  min-height: 180px;
+}
+
+.coverage-panel {
+  display: none;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.coverage-panel.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .coverage-areas {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
+  justify-content: center;
 }
 
 .coverage-area-tag {
   background: var(--gray-100);
-  color: #2A2F6B;
-  padding: 8px 16px;
+  color: var(--primary);
+  padding: 8px 18px;
   border-radius: 50px;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 600;
   transition: all 0.3s ease;
   border: 1px solid var(--gray-200);
 }
 
 .coverage-area-tag:hover {
-  background: #2A2F6B;
+  background: var(--accent);
   color: var(--white);
-  border-color: #2A2F6B;
+  border-color: var(--accent);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(201, 75, 124, 0.2);
 }
 
 /* ---------- Contact Page ---------- */

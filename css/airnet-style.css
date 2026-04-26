@@ -1339,6 +1339,36 @@ h4 { font-size: 1.25rem; }
 }
 
 
+/* ---------- Coverage Section (Container) ---------- */
+.coverage-section {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, #2D1B5A 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle dot overlay pattern like the hero section */
+.coverage-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.coverage-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.coverage-section .section-title h2 {
+  color: var(--white);
+}
+
+.coverage-section .section-title p {
+  color: rgba(255,255,255,0.8);
+}
+
+
 /* ---------- Coverage Section (Tabs) ---------- */
 .coverage-tabs-wrapper {
   max-width: 800px;

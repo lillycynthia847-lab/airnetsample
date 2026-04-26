@@ -2465,8 +2465,8 @@ h4 { font-size: 1.25rem; }
 
 .service-card--featured h3,
 .service-card--featured .service-card-number { color: var(--white); }
-.service-card--featured p { color: rgba(255,255,255,0.8); }
-.service-card--featured .service-features li { color: rgba(255,255,255,0.85); }
+.service-card--featured p { color: rgba(255,255,255,0.95); font-weight: 400; }
+.service-card--featured .service-features li { color: rgba(255,255,255,0.95); font-weight: 500; }
 .service-card--featured .service-card-cta { color: var(--sky-blue); }
 
 .service-card-badge {

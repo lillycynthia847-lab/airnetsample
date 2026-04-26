@@ -152,14 +152,14 @@ function populateContactInfo() {
   document.getElementById('contact-phone').value = c.phone || '';
   document.getElementById('contact-whatsapp').value = c.whatsapp || '';
   document.getElementById('contact-support-email').value = c.supportEmail || '';
-  document.getElementById('contact-sales-email').value = c.salesEmail || '';
+  document.getElementById('contact-operations-email').value = c.operationsEmail || '';
   document.getElementById('contact-location').value = c.location || '';
   document.getElementById('social-facebook').value = c.socialMedia.facebook || '';
   document.getElementById('social-instagram').value = c.socialMedia.instagram || '';
   document.getElementById('social-tiktok').value = c.socialMedia.tiktok || '';
 
   // Add change listeners
-  ['contact-phone', 'contact-whatsapp', 'contact-support-email', 'contact-sales-email',
+  ['contact-phone', 'contact-whatsapp', 'contact-support-email', 'contact-operations-email',
    'contact-location', 'social-facebook', 'social-instagram', 'social-tiktok'].forEach(id => {
     document.getElementById(id).addEventListener('input', () => markUnsaved());
   });
@@ -169,7 +169,7 @@ function gatherContactInfo() {
   adminContent.contact.phone = document.getElementById('contact-phone').value;
   adminContent.contact.whatsapp = document.getElementById('contact-whatsapp').value;
   adminContent.contact.supportEmail = document.getElementById('contact-support-email').value;
-  adminContent.contact.salesEmail = document.getElementById('contact-sales-email').value;
+  adminContent.contact.operationsEmail = document.getElementById('contact-operations-email').value;
   adminContent.contact.location = document.getElementById('contact-location').value;
   adminContent.contact.socialMedia.facebook = document.getElementById('social-facebook').value;
   adminContent.contact.socialMedia.instagram = document.getElementById('social-instagram').value;

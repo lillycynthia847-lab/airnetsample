@@ -296,8 +296,8 @@ function initContact() {
       </div>
       <div class="contact-card fade-in">
         <div class="icon-circle">${ICONS.email}</div>
-        <h3>Sales Email</h3>
-        <a href="mailto:${c.salesEmail}">${c.salesEmail}</a>
+        <h3>Operations</h3>
+        <a href="mailto:${c.operationsEmail}">${c.operationsEmail}</a>
       </div>
       <div class="contact-card fade-in">
         <div class="icon-circle">${ICONS.location}</div>

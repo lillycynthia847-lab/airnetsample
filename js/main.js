@@ -35,13 +35,13 @@ async function loadContent() {
 
 // ---- WhatsApp Links ----
 function getWhatsAppLink(packageName, speed, type) {
-  const phone = siteContent?.contact?.whatsapp || '254721515583';
+  const phone = siteContent?.contact?.whatsapp || '254711859885';
   const message = encodeURIComponent(`Hi, I'd like to subscribe to the ${packageName} (${speed} Mbps) ${type} plan.`);
   return `https://wa.me/${phone}?text=${message}`;
 }
 
 function getWhatsAppGeneralLink() {
-  const phone = siteContent?.contact?.whatsapp || '254721515583';
+  const phone = siteContent?.contact?.whatsapp || '254711859885';
   const message = encodeURIComponent("Hello Airnet Broadband, I'd like to enquire about your internet services.");
   return `https://wa.me/${phone}?text=${message}`;
 }

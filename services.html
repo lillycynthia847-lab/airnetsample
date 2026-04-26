@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Airnet Broadband services — Home Fiber, Business Fiber, VoIP, CCTV connectivity, managed networking and more across Kenya.">
+  <title>Our Services | Airnet Broadband</title>
+  <link rel="stylesheet" href="css/airnet-style.css">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-content">
+      <div class="logo-wrapper">
+        <img src="assets/airnet_logo_vector.svg" alt="Airnet Broadband" onerror="this.src='assets/logo.png'">
+        <div class="logo-shimmer"></div>
+      </div>
+      <div class="loader-spinner"></div>
+      <p>Initializing Connection...</p>
+    </div>
+  </div>
+
+  <!-- Embedded Fallback Data -->
+  <script>
+    window.AIRNET_DATA = {
+      "company": { "name": "Airnet Broadband", "tagline": "Fast. Reliable. Affordable Internet" },
+      "contact": {
+        "phone": "0721515583",
+        "whatsapp": "254721515583",
+        "supportEmail": "info@airnet.co.ke",
+        "salesEmail": "sales@airnet.co.ke",
+        "location": "Gathii Hse Ground Floor, Suite 3, Kanisa ST, Nyeri, Kenya",
+        "socialMedia": { "facebook": "https://facebook.com/airnetke", "instagram": "", "tiktok": "" }
+      }
+    };
+  </script>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <a href="#" id="topbar-phone">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span id="topbar-phone-text"></span>
+        </a>
+        <a href="#" id="topbar-email">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span id="topbar-email-text"></span>
+        </a>
+      </div>
+      <div class="top-bar-right">
+        <div class="top-bar-social" id="topbar-social"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="Airnet Broadband" onerror="this.style.display='none'">
+        <div class="nav-logo-text">Airnet <span>Broadband</span></div>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html#packages">Packages</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="index.html#coverage">Coverage</a>
+        <a href="contact.html">Contact</a>
+        <a href="#" class="btn btn-whatsapp nav-cta" id="nav-whatsapp" target="_blank">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <!-- ===== HERO ===== -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="container">
+      <div class="page-hero-content reveal">
+        <span class="page-hero-badge">What We Offer</span>
+        <h1>Powering Kenya<br><em>One Connection at a Time</em></h1>
+        <p>From residential home fibre to enterprise-grade business solutions, Airnet Broadband delivers world-class connectivity services tailored to every need.</p>
+        <a href="index.html#packages" class="btn btn-primary">View Our Packages</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES GRID ===== -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Our Services</h2>
+        <p>Comprehensive connectivity solutions built for homes and businesses across Kenya</p>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- Home Fibre -->
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="service-card-number">01</div>
+          <h3>Home Fibre (FTTH)</h3>
+          <p>Experience lightning-fast, 100% fibre optic internet directly to your home. Our residential plans start from just KSh 2,000/month and support 4K streaming, gaming, and smart home devices without buffering.</p>
+          <ul class="service-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Speeds up to 40 Mbps</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Free Installation</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Unlimited Traffic</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 24/7 Technical Support</li>
+          </ul>
+          <a href="index.html#packages" class="service-card-cta">View Home Plans <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+
+        <!-- Business Fibre -->
+        <div class="service-card service-card--featured reveal reveal-delay-2">
+          <div class="service-card-badge">Most Popular</div>
+          <div class="service-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <div class="service-card-number">02</div>
+          <h3>Business Fibre & Dedicated Internet</h3>
+          <p>Enterprise-grade connectivity with guaranteed speeds and Service Level Agreements (SLAs). Keep your business running at full speed with 99.9% uptime and priority technical support.</p>
+          <ul class="service-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Speeds up to 40 Mbps</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Guaranteed SLA Uptime</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Static IP Available</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Priority Support</li>
+          </ul>
+          <a href="index.html#packages" class="service-card-cta">View Business Plans <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+
+        <!-- VoIP -->
+        <div class="service-card reveal reveal-delay-3">
+          <div class="service-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="service-card-number">03</div>
+          <h3>Corporate VoIP Solutions</h3>
+          <p>Replace traditional phone lines with cost-effective, crystal-clear digital desk phones. Our VoIP system connects your entire office seamlessly and reduces your communication costs significantly.</p>
+          <ul class="service-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> HD Voice Quality</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Extension Management</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Call Forwarding & Routing</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Lower Call Costs</li>
+          </ul>
+          <a href="contact.html" class="service-card-cta">Get a Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+
+        <!-- CCTV -->
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+          </div>
+          <div class="service-card-number">04</div>
+          <h3>Remote CCTV & Security Connectivity</h3>
+          <p>Monitor your home or business from anywhere in the world. Our stable, high-upload-speed connections are specifically configured to keep your security cameras streaming reliably, 24/7.</p>
+          <ul class="service-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Stable Upload Speeds</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Dedicated IP Routing</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 24/7 Connectivity</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Remote Access Setup</li>
+          </ul>
+          <a href="contact.html" class="service-card-cta">Get a Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+
+        <!-- Wireless Broadband -->
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+          </div>
+          <div class="service-card-number">05</div>
+          <h3>Wireless Broadband Infrastructure</h3>
+          <p>Not every location has physical fibre access yet. Our point-to-point and point-to-multipoint wireless broadband solutions bring fast, reliable internet to homes and businesses in hard-to-reach areas.</p>
+          <ul class="service-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Wide Coverage Reach</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Quick Deployment</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Reliable Uptime</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Scalable Bandwidth</li>
+          </ul>
+          <a href="contact.html" class="service-card-cta">Check Coverage <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+
+        <!-- Managed Networking -->
+        <div class="service-card reveal reveal-delay-3">
+          <div class="service-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+          </div>
+          <div class="service-card-number">06</div>
+          <h3>Managed Networking & Structured Cabling</h3>
+          <p>Professional LAN setup, router configuration, and Wi-Fi dead-zone elimination for large homes, apartment complexes, and corporate offices. We design and manage your entire internal network infrastructure.</p>
+          <ul class="service-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Professional LAN Design</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Wi-Fi Optimization</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Structured Cabling</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Ongoing Management</li>
+          </ul>
+          <a href="contact.html" class="service-card-cta">Get a Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY AIRNET CTA ===== -->
+  <section class="services-cta-section reveal">
+    <div class="container">
+      <div class="services-cta-grid">
+        <div class="services-cta-text">
+          <span class="page-hero-badge">Why Choose Airnet?</span>
+          <h2>Trusted by homes &amp; businesses across Central Kenya</h2>
+          <p>We don't just sell internet — we build long-term relationships with our clients by delivering consistent speed, honest pricing, and personal support you can count on.</p>
+          <div class="services-cta-stats">
+            <div class="cta-stat"><strong>100%</strong><span>Fibre Optic Network</span></div>
+            <div class="cta-stat"><strong>24/7</strong><span>Technical Support</span></div>
+            <div class="cta-stat"><strong>Free</strong><span>Installation</span></div>
+          </div>
+        </div>
+        <div class="services-cta-actions">
+          <a href="index.html#packages" class="btn btn-primary">View All Packages</a>
+          <a href="contact.html" class="btn btn-outline">Talk to Our Team</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-text">Airnet <span>Broadband</span></div>
+          <p>Fast, reliable, and affordable fiber internet services for homes and businesses across Kenya.</p>
+          <div class="footer-social" id="footer-social"></div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="index.html#packages">Packages</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About Us</a>
+          <a href="index.html#coverage">Coverage</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <a href="services.html">Home Fibre</a>
+          <a href="services.html">Business Fibre</a>
+          <a href="services.html">VoIP Solutions</a>
+          <a href="services.html">Remote CCTV</a>
+          <a href="services.html">Managed Networks</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="#" id="footer-phone"></a>
+          <a href="#" id="footer-email"></a>
+          <p id="footer-location" style="padding: 6px 0; font-size: 0.95rem;"></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="footer-year"></span> Airnet Broadband Limited. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+
+  <!-- WhatsApp Float -->
+  <a href="#" class="whatsapp-float" id="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

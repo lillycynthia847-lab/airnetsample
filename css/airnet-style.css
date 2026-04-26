@@ -2471,13 +2471,11 @@ h4 { font-size: 1.25rem; }
   box-shadow: 0 16px 40px rgba(201, 75, 124, 0.25);
 }
 
-.service-card--featured h3,
-.service-card--featured .service-card-number { color: var(--primary); }
+.service-card--featured h3 { color: var(--primary); }
+.service-card--featured .service-card-number { color: var(--gray-400); }
 .service-card--featured p { color: var(--gray-600); }
 .service-card--featured .service-features li { color: var(--gray-600); font-weight: 500; }
 .service-card--featured .service-card-cta { color: var(--accent); }
-.service-card--featured .service-card-icon { background: linear-gradient(135deg, rgba(201,75,124,0.1), rgba(123,63,160,0.1)); }
-.service-card--featured .service-card-icon svg { color: var(--accent); }
 
 .service-card-badge {
   position: absolute;

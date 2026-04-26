@@ -2737,7 +2737,20 @@ h4 { font-size: 1.25rem; }
   margin-bottom: 2px;
 }
 
-.contact-page-quick-card p { font-size: 0.95rem; font-weight: 600; color: var(--primary); margin: 0; }
+.contact-page-quick-card > div:not(.cpq-icon) {
+  min-width: 0;
+  flex: 1;
+}
+
+.contact-page-quick-card p { 
+  font-size: 0.95rem; 
+  font-weight: 600; 
+  color: var(--primary); 
+  margin: 0; 
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
 
 /* =============================================
    CONTACT PAGE — FORM + MAP

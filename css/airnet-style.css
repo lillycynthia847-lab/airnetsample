@@ -2504,8 +2504,6 @@ h4 { font-size: 1.25rem; }
 }
 
 .service-card-icon svg { width: 28px; height: 28px; color: var(--accent); }
-.service-card--featured .service-card-icon { background: rgba(255,255,255,0.15); }
-.service-card--featured .service-card-icon svg { color: var(--white); }
 
 .service-card-number {
   font-size: 0.75rem;

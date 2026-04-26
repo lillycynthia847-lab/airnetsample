@@ -172,7 +172,8 @@
             <div class="form-group">
               <textarea id="message" placeholder="How can we help?" rows="4" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+            <div id="home-form-feedback" class="form-feedback" style="display:none; margin-bottom: 15px;"></div>
+            <button type="submit" id="home-submit-btn" class="btn btn-primary w-100">Send Message</button>
           </form>
         </div>
 
@@ -222,5 +223,46 @@
   </a>
 
   <script src="js/main.js"></script>
+
+  <script>
+    // Home Page Form Handler
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('home-submit-btn');
+      const feedback = document.getElementById('home-form-feedback');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      const data = {
+        name: document.getElementById('name').value,
+        phone: document.getElementById('phone').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value,
+      };
+
+      try {
+        const response = await fetch('api/send-mail.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        const result = await response.json();
+        if (result.success) {
+          feedback.style.display = 'block';
+          feedback.className = 'form-feedback form-feedback--success';
+          feedback.textContent = '✅ Thank you! Your message has been sent.';
+          this.reset();
+        } else {
+          throw new Error(result.message || 'Server error');
+        }
+      } catch (err) {
+        feedback.style.display = 'block';
+        feedback.className = 'form-feedback form-feedback--error';
+        feedback.textContent = '❌ Could not send your message right now. Please call or WhatsApp us directly.';
+      }
+      btn.textContent = 'Send Message';
+      btn.disabled = false;
+    });
+  </script>
 </body>
 </html>

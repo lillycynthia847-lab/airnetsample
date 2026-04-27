@@ -20,28 +20,28 @@
   },
   "homeFibre": [
     {
-      "name": "Light Pro",
+      "name": "Jamii",
       "speed": "15",
       "price": "2,000",
       "features": ["Light Web Browsing", "Email & Basic Attachments", "Moderate Streaming", "Free Installation"],
       "highlighted": false
     },
     {
-      "name": "Premium Pro",
+      "name": "Chap Chap",
       "speed": "20",
       "price": "2,500",
       "features": ["Large File Sharing", "HD Streaming", "Fast Web Browsing", "Free Installation"],
       "highlighted": true
     },
     {
-      "name": "Premium Plus Pro",
+      "name": "Supa",
       "speed": "30",
       "price": "3,000",
       "features": ["HD/Live Streaming", "Multiple Device Streaming", "Superfast Video Downloads", "Free Installation"],
       "highlighted": false
     },
     {
-      "name": "Ultimate",
+      "name": "Imara",
       "speed": "40",
       "price": "4,000",
       "features": ["4K Live Streaming", "Multiple Device Streaming", "Superfast Video Downloads", "Free Installation"],
@@ -50,28 +50,28 @@
   ],
   "businessFibre": [
     {
-      "name": "Business 15",
+      "name": "Kazi Basic",
       "speed": "15",
       "price": "2,500",
       "features": ["Unlimited Traffic", "Free Installation", "Light Web Browsing", "Email & Basic Attachments", "Moderate Streaming"],
       "highlighted": false
     },
     {
-      "name": "Business 20",
+      "name": "Kazi Pro",
       "speed": "20",
       "price": "5,000",
       "features": ["Unlimited Traffic", "Free Installation", "Large File Sharing", "HD Streaming", "Fast Web Browsing"],
       "highlighted": true
     },
     {
-      "name": "Business 30",
+      "name": "Kiongozi",
       "speed": "30",
       "price": "7,500",
       "features": ["Unlimited Traffic", "Free Installation", "HD/Live Streaming", "Voice over IP (IP Phones)", "Remote CCTV Connection"],
       "highlighted": false
     },
     {
-      "name": "Business 40",
+      "name": "Shujaa",
       "speed": "40",
       "price": "10,000",
       "features": ["Unlimited Traffic", "Free Installation", "HD/Live Streaming", "Voice over IP (IP Phones)", "Remote CCTV Connection"],

@@ -46,6 +46,13 @@ function getWhatsAppGeneralLink() {
   return `https://wa.me/${phone}?text=${message}`;
 }
 
+function getCoverageWhatsAppLink(regionName, areaName) {
+  const phone = siteContent?.contact?.whatsapp || '254711859885';
+  const msg = `Hello Airnet Broadband, I am interested in getting connected.\nLocation: ${areaName}, ${regionName}\nPackage: [Type your preferred package]\nName: [Type your name]`;
+  const message = encodeURIComponent(msg);
+  return `https://wa.me/${phone}?text=${message}`;
+}
+
 // ---- Navigation ----
 function initNavigation() {
   const hamburger = document.getElementById('hamburger');
@@ -246,7 +253,7 @@ function initCoverage() {
       ${siteContent.coverage.map((region, i) => `
         <div class="coverage-panel ${i === 0 ? 'active' : ''}" id="coverage-panel-${i}">
           <div class="coverage-areas">
-            ${region.areas.map(a => `<span class="coverage-area-tag">${a}</span>`).join('')}
+            ${region.areas.map(a => `<a href="${getCoverageWhatsAppLink(region.region, a)}" target="_blank" class="coverage-area-tag" title="Check Availability via WhatsApp">${a}</a>`).join('')}
           </div>
         </div>
       `).join('')}

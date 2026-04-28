@@ -1467,6 +1467,9 @@ h4 { font-size: 1.25rem; }
   font-weight: 600;
   transition: all 0.3s ease;
   border: 1px solid var(--gray-200);
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .coverage-area-tag:hover {

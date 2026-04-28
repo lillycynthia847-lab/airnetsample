@@ -147,8 +147,6 @@ function populateFooter() {
 
   const waFloat = document.getElementById('whatsapp-float');
   if (waFloat) waFloat.href = getWhatsAppGeneralLink();
-  const navWa = document.getElementById('nav-whatsapp');
-  if (navWa) navWa.href = getWhatsAppGeneralLink();
 }
 
 // ---- Packages ----

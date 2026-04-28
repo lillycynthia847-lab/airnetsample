@@ -1715,25 +1715,32 @@ h4 { font-size: 1.25rem; }
   position: fixed;
   bottom: 24px;
   right: 24px;
-  width: 60px;
-  height: 60px;
+  padding: 12px 20px;
   background: var(--whatsapp);
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
   z-index: 999;
   transition: all var(--transition-base);
   animation: waPulse 2s infinite;
+  color: var(--white);
+  text-decoration: none;
 }
 .whatsapp-float:hover {
-  transform: scale(1.1);
+  transform: translateY(-4px);
   box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+  color: var(--white);
+}
+.whatsapp-float-text {
+  font-weight: 600;
+  font-size: 0.95rem;
 }
 .whatsapp-float svg {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   fill: var(--white);
 }
 

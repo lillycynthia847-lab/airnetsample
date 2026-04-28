@@ -60,13 +60,13 @@
 /* ---------- CSS Custom Properties ---------- */
 :root {
   /* Brand Colors */
-  --primary: #1B1F4B;
-  --primary-light: #2A2F6B;
-  --primary-dark: #0E1130;
+  --primary: #261447;
+  --primary-light: #3A1E6D;
+  --primary-dark: #140A26;
   --accent: #C94B7C;
   --accent-light: #E06B9A;
   --accent-dark: #A03560;
-  --purple: #7B3FA0;
+  --purple: #FF007F;
   --sky-blue: #00AEEF;
 
   /* Neutrals */

@@ -634,7 +634,7 @@ h4 { font-size: 1.25rem; }
 
 /* ---------- Hero Section ---------- */
 .hero {
-  background: linear-gradient(rgba(10, 15, 44, 0.92), rgba(26, 31, 78, 0.88)), url('../assets/hero-bg.png') center/cover no-repeat;
+  background: linear-gradient(rgba(10, 15, 44, 0.75), rgba(26, 31, 78, 0.80)), url('../assets/hero-family.png') center/cover no-repeat;
   min-height: 90vh;
   display: flex;
   align-items: center;

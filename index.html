@@ -233,6 +233,23 @@
   <script src="js/main.js"></script>
 
   <script>
+    // Fix anchor scroll: wait for JS to finish rendering dynamic sections
+    window.addEventListener('load', function () {
+      if (window.location.hash) {
+        const hash = window.location.hash;
+        setTimeout(function () {
+          const target = document.querySelector(hash);
+          if (target) {
+            const navHeight = document.getElementById('navbar')?.offsetHeight || 80;
+            const top = target.getBoundingClientRect().top + window.scrollY - navHeight - 10;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+          }
+        }, 300);
+      }
+    });
+  </script>
+
+  <script>
     // Home Page Form Handler
     document.getElementById('contactForm').addEventListener('submit', async function(e) {
       e.preventDefault();

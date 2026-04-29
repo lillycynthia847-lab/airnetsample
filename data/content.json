@@ -23,28 +23,48 @@
       "name": "Jamii",
       "speed": "15",
       "price": "2,000",
-      "features": ["Light Web Browsing", "Email & Basic Attachments", "Moderate Streaming", "Free Installation"],
+      "features": [
+        "Light Web Browsing",
+        "Email & Basic Attachments",
+        "Moderate Streaming",
+        "Free Installation"
+      ],
       "highlighted": false
     },
     {
       "name": "Chap Chap",
       "speed": "20",
       "price": "2,500",
-      "features": ["Large File Sharing", "HD Streaming", "Fast Web Browsing", "Free Installation"],
+      "features": [
+        "Large File Sharing",
+        "HD Streaming",
+        "Fast Web Browsing",
+        "Free Installation"
+      ],
       "highlighted": true
     },
     {
       "name": "Supa",
       "speed": "30",
       "price": "3,000",
-      "features": ["HD/Live Streaming", "Multiple Device Streaming", "Superfast Video Downloads", "Free Installation"],
+      "features": [
+        "HD/Live Streaming",
+        "Multiple Device Streaming",
+        "Superfast Video Downloads",
+        "Free Installation"
+      ],
       "highlighted": false
     },
     {
       "name": "Imara",
       "speed": "40",
       "price": "4,000",
-      "features": ["4K Live Streaming", "Multiple Device Streaming", "Superfast Video Downloads", "Free Installation"],
+      "features": [
+        "4K Live Streaming",
+        "Multiple Device Streaming",
+        "Superfast Video Downloads",
+        "Free Installation"
+      ],
       "highlighted": false
     }
   ],
@@ -53,47 +73,201 @@
       "name": "Kazi Basic",
       "speed": "15",
       "price": "2,500",
-      "features": ["Unlimited Traffic", "Free Installation", "Light Web Browsing", "Email & Basic Attachments", "Moderate Streaming"],
+      "features": [
+        "Unlimited Traffic",
+        "Free Installation",
+        "Light Web Browsing",
+        "Email & Basic Attachments",
+        "Moderate Streaming"
+      ],
       "highlighted": false
     },
     {
       "name": "Kazi Pro",
       "speed": "20",
       "price": "5,000",
-      "features": ["Unlimited Traffic", "Free Installation", "Large File Sharing", "HD Streaming", "Fast Web Browsing"],
+      "features": [
+        "Unlimited Traffic",
+        "Free Installation",
+        "Large File Sharing",
+        "HD Streaming",
+        "Fast Web Browsing"
+      ],
       "highlighted": true
     },
     {
       "name": "Kiongozi",
       "speed": "30",
       "price": "7,500",
-      "features": ["Unlimited Traffic", "Free Installation", "HD/Live Streaming", "Voice over IP (IP Phones)", "Remote CCTV Connection"],
+      "features": [
+        "Unlimited Traffic",
+        "Free Installation",
+        "HD/Live Streaming",
+        "Voice over IP (IP Phones)",
+        "Remote CCTV Connection"
+      ],
       "highlighted": false
     },
     {
       "name": "Shujaa",
       "speed": "40",
       "price": "10,000",
-      "features": ["Unlimited Traffic", "Free Installation", "HD/Live Streaming", "Voice over IP (IP Phones)", "Remote CCTV Connection"],
+      "features": [
+        "Unlimited Traffic",
+        "Free Installation",
+        "HD/Live Streaming",
+        "Voice over IP (IP Phones)",
+        "Remote CCTV Connection"
+      ],
       "highlighted": false
     }
   ],
   "coverage": [
     {
       "region": "Nyeri",
-      "areas": ["Nyeri Town", "King'ong'o", "Transformer", "Mathari Hospital Area", "Pembe Tatu", "Kamakwa", "Ring Road", "Mumbi", "Asian Quarters", "Classic", "Ciaraini", "Skuta", "Gatitu", "Mesha", "Ruring'u"]
+      "areas": [
+        "Nyeri Town",
+        "King'ong'o",
+        "Transformer",
+        "Mathari Hospital Area",
+        "Pembe Tatu",
+        "Kamakwa",
+        "Ring Road",
+        "Mumbi",
+        "Asian Quarters",
+        "Classic",
+        "Ciaraini",
+        "Skuta",
+        "Gatitu",
+        "Mesha",
+        "Ruring'u"
+      ]
     },
     {
       "region": "Kutus",
-      "areas": ["Kutus Town", "Mjini", "Gakuu", "Rukenya", "Spenza Area", "Kimica"]
+      "areas": [
+        "Kutus cbd",
+        "Spenza",
+        "Municipality",
+        "Gatuto",
+        "ngomongo",
+        "Password",
+        "D8",
+        "mjini",
+        "Kibugi",
+        "Tamani",
+        "Alber",
+        "Rosepark",
+        "Joy millers",
+        "Gakuu"
+      ]
     },
     {
       "region": "Mwea",
-      "areas": ["Mwea Town", "Wang'uru", "Thiba", "Gathigiriri", "Murubara", "Red Soil", "Karira", "Kimbimbi"]
+      "areas": [
+        "Mwea Town",
+        "Wang'uru",
+        "Thiba",
+        "Gathigiriri",
+        "Murubara",
+        "Red Soil",
+        "Karira",
+        "Kimbimbi"
+      ]
     },
     {
       "region": "Kagio",
-      "areas": ["Kagio Town", "Wisdom Petrol Station Area", "Silver Slopes Area", "Abai Area", "Baricho Road Thumaita", "Kandongu", "Gigi Lounge Area", "Kiamachiri Police Area"]
+      "areas": [
+        "Kagio cbd",
+        "Kang'aru",
+        "Bufallo area",
+        "Gatarwa",
+        "Marjorie school",
+        "kiunga",
+        "Sweet palace",
+        "Digit one",
+        "Pashia investments",
+        "ACK kiamaciri",
+        "ACK kagio primary",
+        "Mwalimu blessed estate",
+        "Silmatt",
+        "Behind Wananchi butchery",
+        "Ngameone",
+        "Rwang'ondu",
+        "Abai",
+        "Githinjiro",
+        "Kisaju",
+        "Gathuthini",
+        "Miles court estate",
+        "Baricho road",
+        "Wingu Kenda estate",
+        "Juhudi estate",
+        "Thumaita estate",
+        "Kiaga",
+        "Kimicha town",
+        "Njegas"
+      ]
+    },
+    {
+      "region": "Kitale",
+      "areas": [
+        "Town",
+        "All Saints",
+        "St Marye",
+        "Stage Choma",
+        "Makunga",
+        "Norec",
+        "Kibomet Forest",
+        "Norec KAG",
+        "Ragira",
+        "Kibomet Primary",
+        "Sinendeet",
+        "Chairman's Plaza",
+        "Trailer",
+        "Ngeywa Estate",
+        "Legacy",
+        "Section 6",
+        "Section 19",
+        "Line Moja",
+        "Vetinary",
+        "Lessos ya wamama",
+        "Lessos centre",
+        "Lessos Progressive",
+        "Lessos Vineyard",
+        "Springs Estate",
+        "Barabara Mpya",
+        "Lessos Airport",
+        "Lessos Faithcare",
+        "Matisi",
+        "Matisi kwa Chief",
+        "Matisi St Johns",
+        "Tuwan",
+        "Tuwan kisumu ndogo",
+        "Tuwan sondit",
+        "Bondeni",
+        "Mitume",
+        "Mitume Booster",
+        "Site and service",
+        "Machinjoni",
+        "Shushi",
+        "Kitale school",
+        "Mtondo/flyover",
+        "Cheragany Nursing",
+        "Dantex",
+        "Gatua",
+        "Village-inn",
+        "Siyenga",
+        "Marble",
+        "Adam City",
+        "Namgoi",
+        "Sirende",
+        "Lessos booster",
+        "Lessos primary",
+        "Lessos, tunza clinic",
+        "Kipsongo center",
+        "Kipsongoo kitten",
+        "Kipsongoo, umoja"
+      ]
     }
   ],
   "admin": {

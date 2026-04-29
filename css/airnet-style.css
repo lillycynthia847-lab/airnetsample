@@ -2375,6 +2375,20 @@ h4 { font-size: 1.25rem; }
   background: linear-gradient(to right, rgba(14, 17, 48, 0.9) 0%, rgba(27, 31, 75, 0.6) 100%), url('../assets/services-hero-bg.png') center/cover no-repeat;
 }
 
+.services-hero {
+  padding: 110px 0 45px !important;
+}
+
+.services-hero .page-hero-content h1 {
+  font-size: 2.4rem;
+  margin-bottom: var(--space-md);
+}
+
+.services-hero .page-hero-content p {
+  font-size: 1rem;
+  margin-bottom: var(--space-lg);
+}
+
 .contact-hero {
   padding: 110px 0 40px !important;
   min-height: unset;
@@ -2441,6 +2455,7 @@ h4 { font-size: 1.25rem; }
 @media (max-width: 768px) {
   .page-hero { padding: 110px 0 50px; }
   .contact-hero { padding: 90px 0 25px !important; }
+  .services-hero { padding: 90px 0 30px !important; }
   .page-hero-content h1 { font-size: 2.5rem; }
 }
 

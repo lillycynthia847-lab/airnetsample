@@ -2358,7 +2358,7 @@ h4 { font-size: 1.25rem; }
    ============================================= */
 .page-hero {
   position: relative;
-  padding: 160px 0 100px;
+  padding: 130px 0 70px;
   text-align: center;
   overflow: hidden;
   color: var(--white);
@@ -2367,7 +2367,7 @@ h4 { font-size: 1.25rem; }
 .page-hero-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, #2D1B5A 100%);
+  background: linear-gradient(to right, rgba(14, 17, 48, 0.9) 0%, rgba(27, 31, 75, 0.7) 100%), url('../assets/hero-bg.png') center/cover no-repeat;
   z-index: 0;
 }
 
@@ -2426,7 +2426,7 @@ h4 { font-size: 1.25rem; }
 }
 
 @media (max-width: 768px) {
-  .page-hero { padding: 130px 0 80px; }
+  .page-hero { padding: 110px 0 50px; }
   .page-hero-content h1 { font-size: 2.5rem; }
 }
 

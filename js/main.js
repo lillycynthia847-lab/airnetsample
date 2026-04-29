@@ -208,6 +208,13 @@ function initPackages() {
       }
     });
   });
+
+  // Handle URL parameters for automatic tab selection
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('tab') === 'business') {
+    const bizTab = document.getElementById('tab-business');
+    if (bizTab) bizTab.click();
+  }
 }
 
 // ---- About ----

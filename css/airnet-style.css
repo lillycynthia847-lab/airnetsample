@@ -703,10 +703,9 @@ h4 { font-size: 1.25rem; }
 .hero-visuals {
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-md);
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .hero-img-family,
@@ -714,12 +713,13 @@ h4 { font-size: 1.25rem; }
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  width: 100%;
 }
 
 .hero-img-family img,
 .hero-img-map img {
   width: 100%;
-  height: 340px;
+  height: 420px;
   object-fit: cover;
   display: block;
   transition: transform 0.4s ease;

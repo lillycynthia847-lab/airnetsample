@@ -193,6 +193,12 @@ h4 { font-size: 1.25rem; }
 
 .section {
   padding: var(--space-3xl) 0;
+  scroll-margin-top: 80px;
+}
+
+/* Ensure all anchor targets clear the fixed navbar */
+[id] {
+  scroll-margin-top: 80px;
 }
 
 .section-title {

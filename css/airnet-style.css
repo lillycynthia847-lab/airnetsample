@@ -391,7 +391,7 @@ h4 { font-size: 1.25rem; }
 .nav-links {
   display: flex;
   align-items: center;
-  gap: var(--space-md);
+  gap: var(--space-lg);
 }
 
 .nav-links a:not(.btn) {

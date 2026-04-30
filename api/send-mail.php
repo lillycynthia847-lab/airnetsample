@@ -32,7 +32,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
-$to = 'info@airnet.co.ke';
+$to = 'operations@airnet.co.ke';
 $subject = "New Website Inquiry from $name ($service)";
 
 $body = "You have received a new message from your website contact form.\n\n";

@@ -328,3 +328,95 @@ function showToast(message, type = 'success') {
     toast.classList.remove('show');
   }, 3500);
 }
+
+// ==============================
+// CAREERS MANAGEMENT
+// ==============================
+
+async function loadAdminCareers() {
+  const container = document.getElementById('admin-careers-list');
+  if (!container) return;
+  try {
+    const res  = await fetch('api/get-careers.php');
+    const jobs = await res.json();
+    if (!jobs || jobs.length === 0) {
+      container.innerHTML = '<p style="color:var(--gray-500); padding: 1rem 0;">No job openings posted yet.</p>';
+      return;
+    }
+    container.innerHTML = jobs.map(job => `
+      <div style="display:flex; justify-content:space-between; align-items:center; background:var(--white); border:1px solid var(--gray-200); border-radius:10px; padding:1rem 1.25rem; margin-bottom:0.75rem;">
+        <div>
+          <strong style="font-size:1rem;">${job.title}</strong>
+          <span style="margin-left:10px; font-size:0.8rem; color:var(--gray-500);">${job.department || ''} ${job.type ? '· ' + job.type : ''} ${job.location ? '· ' + job.location : ''}</span>
+          ${job.deadline ? `<br><small style="color:var(--gray-400);">Deadline: ${job.deadline}</small>` : ''}
+        </div>
+        <button onclick="deleteJob('${job.id}')" style="background:#fee2e2; color:#dc2626; border:none; padding:8px 16px; border-radius:8px; cursor:pointer; font-size:0.85rem; font-weight:600;">🗑 Delete</button>
+      </div>
+    `).join('');
+  } catch (e) {
+    container.innerHTML = '<p style="color:red;">Failed to load careers.</p>';
+  }
+}
+
+async function postJob() {
+  const title    = document.getElementById('career-title').value.trim();
+  const dept     = document.getElementById('career-dept').value.trim();
+  const location = document.getElementById('career-location').value.trim();
+  const type     = document.getElementById('career-type').value;
+  const desc     = document.getElementById('career-desc').value.trim();
+  const deadline = document.getElementById('career-deadline').value;
+  const feedback = document.getElementById('career-feedback');
+
+  if (!title) { alert('Please enter a job title.'); return; }
+
+  try {
+    const res    = await fetch('api/save-careers.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'add', title, department: dept, location, type, description: desc, deadline })
+    });
+    const result = await res.json();
+    feedback.style.display = 'block';
+    if (result.success) {
+      feedback.style.color = 'green';
+      feedback.textContent = '✅ Job posted successfully!';
+      // Clear form
+      ['career-title','career-dept','career-location','career-desc','career-deadline'].forEach(id => document.getElementById(id).value = '');
+      loadAdminCareers();
+    } else {
+      feedback.style.color = 'red';
+      feedback.textContent = '❌ ' + (result.message || 'Failed to post job.');
+    }
+  } catch (e) {
+    feedback.style.display = 'block';
+    feedback.style.color = 'red';
+    feedback.textContent = '❌ Network error. Try again.';
+  }
+}
+
+async function deleteJob(id) {
+  if (!confirm('Are you sure you want to delete this job opening?')) return;
+  try {
+    const res    = await fetch('api/save-careers.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'delete', id })
+    });
+    const result = await res.json();
+    if (result.success) {
+      showToast('Job deleted successfully');
+      loadAdminCareers();
+    }
+  } catch (e) {
+    showToast('Failed to delete job', 'error');
+  }
+}
+
+// Load careers when the tab is opened
+const origSwitchSection = typeof switchSection === 'function' ? switchSection : null;
+document.addEventListener('DOMContentLoaded', () => {
+  // Patch tab switching to load careers on demand
+  document.querySelectorAll('[data-section="careers"]').forEach(btn => {
+    btn.addEventListener('click', () => setTimeout(loadAdminCareers, 100));
+  });
+});

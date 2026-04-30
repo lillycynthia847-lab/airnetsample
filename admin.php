@@ -94,6 +94,7 @@ $isLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'
       <button class="admin-tab" data-section="business-fibre" onclick="switchSection('business-fibre')">🏢 Business Fibre</button>
       <button class="admin-tab" data-section="contact-info" onclick="switchSection('contact-info')">📞 Contact Info</button>
       <button class="admin-tab" data-section="coverage" onclick="switchSection('coverage')">📍 Coverage</button>
+      <button class="admin-tab" data-section="careers" onclick="switchSection('careers')">💼 Careers</button>
       <button class="admin-tab" data-section="company" onclick="switchSection('company')">ℹ️ Company Info</button>
       <button class="admin-tab" data-section="settings" onclick="switchSection('settings')">⚙️ Settings</button>
     </div>
@@ -210,6 +211,51 @@ $isLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'
           </div>
           <button class="btn btn-primary" onclick="changePassword()" style="margin-top: 0.5rem;">Update Password</button>
         </div>
+      </div>
+
+      <!-- Careers Section -->
+      <div class="admin-section" id="section-careers">
+        <h3>Careers / Job Openings</h3>
+        <p style="color: var(--gray-500); margin-bottom: 1.5rem;">Post and manage job openings. They will appear live on the <a href="careers.html" target="_blank" style="color:var(--sky-blue);">Careers page</a>.</p>
+
+        <!-- Add Job Form -->
+        <div style="background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem;">
+          <h4 style="margin-bottom: 1rem; color: var(--primary);">➕ Post a New Job</h4>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="admin-input-group">
+              <label>Job Title *</label>
+              <input type="text" id="career-title" placeholder="e.g. Network Engineer">
+            </div>
+            <div class="admin-input-group">
+              <label>Department</label>
+              <input type="text" id="career-dept" placeholder="e.g. Technical, Sales">
+            </div>
+            <div class="admin-input-group">
+              <label>Location</label>
+              <input type="text" id="career-location" placeholder="e.g. Nyeri, Kitale">
+            </div>
+            <div class="admin-input-group">
+              <label>Employment Type</label>
+              <select id="career-type" style="width:100%; padding: 10px 14px; border: 1.5px solid var(--gray-300); border-radius: 8px; font-size: 0.95rem;">
+                <option>Full Time</option><option>Part Time</option><option>Contract</option><option>Internship</option>
+              </select>
+            </div>
+            <div class="admin-input-group" style="grid-column: span 2;">
+              <label>Job Description</label>
+              <textarea id="career-desc" rows="4" placeholder="Describe the role, responsibilities and requirements..."></textarea>
+            </div>
+            <div class="admin-input-group">
+              <label>Application Deadline</label>
+              <input type="date" id="career-deadline">
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="postJob()" style="margin-top: 1rem;">📤 Post Job Opening</button>
+          <div id="career-feedback" style="margin-top: 1rem; display:none;"></div>
+        </div>
+
+        <!-- Active Jobs List -->
+        <h4 style="margin-bottom: 1rem; color: var(--primary);">📋 Active Openings</h4>
+        <div id="admin-careers-list"><p style="color:var(--gray-500);">Loading...</p></div>
       </div>
 
     </div>

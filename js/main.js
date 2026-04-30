@@ -439,3 +439,25 @@ function initCounters() {
   counters.forEach(counter => observer.observe(counter));
 }
 
+// ---- Nav Dropdown Toggle ----
+document.addEventListener('DOMContentLoaded', () => {
+  const dropdownToggle = document.getElementById('nav-more-btn');
+  const dropdownMenu   = document.getElementById('nav-more-menu');
+
+  if (dropdownToggle && dropdownMenu) {
+    dropdownToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isExpanded = dropdownToggle.getAttribute('aria-expanded') === 'true';
+      dropdownToggle.setAttribute('aria-expanded', !isExpanded);
+      dropdownMenu.classList.toggle('open');
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdownMenu.classList.remove('open');
+      }
+    });
+  }
+});

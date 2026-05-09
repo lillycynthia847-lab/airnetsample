@@ -123,13 +123,30 @@ function populateTopBar() {
   if (emailEl && emailText) { emailEl.href = `mailto:${c.supportEmail}`; emailText.textContent = c.supportEmail; }
 
   const socialContainer = document.getElementById('topbar-social');
+  const navLinksContainer = document.getElementById('nav-links');
+  
   if (socialContainer) {
     socialContainer.innerHTML = '<span class="topbar-follow-label">Follow Us</span>';
     const s = c.socialMedia;
-    if (s.facebook) socialContainer.innerHTML += `<a href="${s.facebook}" target="_blank" title="Facebook">${ICONS.facebook}</a>`;
-    if (s.instagram) socialContainer.innerHTML += `<a href="${s.instagram}" target="_blank" title="Instagram">${ICONS.instagram}</a>`;
-    if (s.tiktok) socialContainer.innerHTML += `<a href="${s.tiktok}" target="_blank" title="TikTok">${ICONS.tiktok}</a>`;
-    if (s.twitter) socialContainer.innerHTML += `<a href="${s.twitter}" target="_blank" title="X (Twitter)">${ICONS.twitter}</a>`;
+    
+    let socialLinksHtml = '';
+    if (s.facebook) socialLinksHtml += `<a href="${s.facebook}" target="_blank" title="Facebook">${ICONS.facebook}</a>`;
+    if (s.instagram) socialLinksHtml += `<a href="${s.instagram}" target="_blank" title="Instagram">${ICONS.instagram}</a>`;
+    if (s.tiktok) socialLinksHtml += `<a href="${s.tiktok}" target="_blank" title="TikTok">${ICONS.tiktok}</a>`;
+    if (s.twitter) socialLinksHtml += `<a href="${s.twitter}" target="_blank" title="X (Twitter)">${ICONS.twitter}</a>`;
+    
+    socialContainer.innerHTML += socialLinksHtml;
+    
+    // Add to mobile nav
+    if (navLinksContainer) {
+      let mobileSocial = document.querySelector('.nav-mobile-social');
+      if (!mobileSocial) {
+        mobileSocial = document.createElement('div');
+        mobileSocial.className = 'nav-mobile-social';
+        navLinksContainer.appendChild(mobileSocial);
+      }
+      mobileSocial.innerHTML = socialLinksHtml;
+    }
   }
 }
 

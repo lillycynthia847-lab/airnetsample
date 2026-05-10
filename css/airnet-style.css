@@ -359,6 +359,7 @@ h4 { font-size: 1.25rem; }
   display: flex;
   align-items: center;
   margin-right: 2px;
+  transform: translateY(1px); /* Nudge down for optical alignment */
 }
 
 /* ---------- Navigation ---------- */
@@ -3111,3 +3112,124 @@ h4 { font-size: 1.25rem; }
 .nav-links a.active { color: var(--accent); font-weight: 700; }
 
 
+/* =============================================
+   SOCIAL HUB
+   ============================================= */
+#social-hub {
+  background: var(--white);
+}
+
+.social-hub-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  border: 1px solid var(--gray-200);
+}
+
+.social-tabs {
+  display: flex;
+  background: var(--gray-50);
+  border-bottom: 1px solid var(--gray-200);
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+}
+.social-tabs::-webkit-scrollbar { display: none; } /* Chrome */
+
+.social-tab {
+  flex: 1;
+  min-width: 120px;
+  background: none;
+  border: none;
+  padding: 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all var(--transition-fast);
+  border-bottom: 3px solid transparent;
+}
+
+.social-tab:hover {
+  background: var(--gray-100);
+  color: var(--primary);
+}
+
+.social-tab.active {
+  color: var(--accent);
+  background: var(--white);
+  border-bottom-color: var(--accent);
+}
+
+.social-content-area {
+  padding: var(--space-xl);
+  background: var(--white);
+  min-height: 540px;
+}
+
+.social-pane {
+  animation: fade-in 0.3s ease;
+}
+
+.social-static-card {
+  text-align: center;
+  padding: var(--space-3xl) var(--space-xl);
+  border-radius: var(--radius-lg);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 450px;
+}
+
+.social-static-card.ig-gradient {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-static-card.tt-gradient {
+  background: linear-gradient(135deg, #000000 0%, #25F4EE 50%, #FE2C55 100%);
+}
+
+.social-static-icon {
+  background: rgba(255,255,255,0.2);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-xl);
+  backdrop-filter: blur(4px);
+}
+
+.social-static-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: var(--space-sm);
+  color: var(--white);
+}
+
+.social-static-card p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: var(--space-2xl);
+  max-width: 400px;
+}
+
+.social-static-card .btn-white {
+  background: var(--white);
+  color: var(--gray-900);
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: var(--radius-full);
+}
+.social-static-card .btn-white:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}

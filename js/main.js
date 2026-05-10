@@ -480,4 +480,28 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // ---- Social Hub Tabs ----
+  const socialTabs = document.querySelectorAll('.social-tab');
+  if (socialTabs.length > 0) {
+    socialTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove active class from all tabs & panes
+        document.querySelectorAll('.social-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.social-pane').forEach(p => {
+          p.style.display = 'none';
+          p.classList.remove('active');
+        });
+
+        // Add active to clicked
+        tab.classList.add('active');
+        const network = tab.getAttribute('data-social');
+        const activePane = document.getElementById(`pane-${network}`);
+        if (activePane) {
+          activePane.style.display = 'block';
+          activePane.classList.add('active');
+        }
+      });
+    });
+  }
 });

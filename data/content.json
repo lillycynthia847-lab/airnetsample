@@ -72,7 +72,7 @@
   "businessFibre": [
     {
       "name": "Kazi Basic",
-      "speed": "15",
+      "speed": "5",
       "price": "2,500",
       "features": [
         "Unlimited Traffic",
@@ -85,7 +85,7 @@
     },
     {
       "name": "Kazi Pro",
-      "speed": "20",
+      "speed": "10",
       "price": "5,000",
       "features": [
         "Unlimited Traffic",
@@ -98,7 +98,7 @@
     },
     {
       "name": "Kiongozi",
-      "speed": "30",
+      "speed": "15",
       "price": "7,500",
       "features": [
         "Unlimited Traffic",
@@ -111,7 +111,7 @@
     },
     {
       "name": "Shujaa",
-      "speed": "40",
+      "speed": "20",
       "price": "10,000",
       "features": [
         "Unlimited Traffic",
